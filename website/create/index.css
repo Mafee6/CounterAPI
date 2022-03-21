@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(45deg, rgba(54,238,224,1) 0%, rgba(246,82,160,1) 100%);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.app {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app fieldset {
+    border: 2.4px solid white;
+    width: 100%;
+    color: white;
+    border-radius: 0.6vh;
+    padding: 10px;
+}
+
+.app legend {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.app fieldset input {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.2em;
+    font-family: "Calibri", sans-serif;
+}
+
+.app .create {
+    padding: 16px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1.1em;
+    border-radius: 0.5vh;
+    margin-top: 10px;
+    width: 100%;
+    user-select: none;
+    transition: filter 0.3s;
+    cursor: pointer;
+} .app .create:hover { filter: brightness(90%) }

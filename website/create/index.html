@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Counter | CounterAPI</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="/icons/CounterAPI.png">
+</head>
+<body>
+    <div class="app">
+        <div>
+            <div class="counter-name">
+                <fieldset>
+                    <legend>Counter Name</legend>
+                    <input id="focus"><script>setTimeout(() => document.querySelector("#focus").focus(), 200)</script>
+                </fieldset>
+            </div>
+            <div class="create">Create</div>
+
+            <script>
+                (() => {
+                    window.addEventListener("keydown", (e) => e.key == "Enter" ? document.querySelector(".create").click() : null);
+                    document.querySelector(".create").addEventListener("click", async () => {
+                        location.href = `/api/create?debug=true&name=${document.querySelector("input").value}`;
+                    });
+                })();
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

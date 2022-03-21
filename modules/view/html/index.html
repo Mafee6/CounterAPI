@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/icons/CounterAPI.png">
+    <title>View | CounterAPI</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            color: white;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(105deg, {{COLOR}} 0%, #383838 100%);
+        }
+
+        .counter {
+            width: 70vw;
+            height: 70vh;
+            background-color: rgb(255, 255, 255, 0.3);
+            border-radius: 1vh;
+            padding: 4vh;
+            font-family: "Calibri", sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .name {
+            font-size: 3em;
+            font-weight: 600;
+        }
+
+        .s{
+            font-size: 1.5em;
+        }
+        
+        a {
+            text-decoration: none;
+            color: rgb(0, 191, 255);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h1>Counter API | View</h1>
+        <div class="name">Name: {{NAME}}</div>
+        <div class="s">Count: {{COUNT}}</div>
+        <div class="s">Created At: {{TIME}}</div>
+        <div class="s">Last Increment: {{LASTINCREMENT}}</div>
+        <div class="s">Color: {{COLOR}}</div>
+        <div class="s">Widget URL: <a href={{WIDGET}}>{{WIDGET}}</a></div>
+        <div class="s"><a href="/">[ Counter API ]</a></div>
+    </div>
+</body>
+</html>

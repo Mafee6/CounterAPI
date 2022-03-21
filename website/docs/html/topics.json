@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Getting Started",
+        "desc": "Getting Started with CounterAPI",
+        "body": "html/gettingstarted.html",
+        "selected": true
+    },
+    {
+        "name": "Api Endpoints",
+        "desc": "A list of the available CounterAPI endpoints",
+        "body": "html/api.html"
+    }
+]

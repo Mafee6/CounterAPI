@@ -1,0 +1,10 @@
+<svg width="98" height="32" viewBox="0 0 88 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.127571" y="0.222221" width="90" height="30" rx="2.5" fill="url(#paint0_linear_2_9)"/>
+    <text x="10" y="22" fill="white" font-size="1em">{{COUNT}}</text>
+    <defs>
+        <linearGradient id="paint0_linear_2_9" x1="83.2551" y1="23.8848" x2="4.44856" y2="2.69135" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00A3FF"/>
+            <stop offset="1" stop-color="#0057FF"/>
+        </linearGradient>
+    </defs>
+</svg>

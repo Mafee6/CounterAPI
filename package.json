@@ -1,0 +1,28 @@
+{
+  "name": "counterapi",
+  "version": "1.0.0",
+  "description": "Count Number of requests",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mafee6/CounterAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mafee6/CounterAPI/issues"
+  },
+  "homepage": "https://github.com/Mafee6/CounterAPI#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "quick.db": "^7.1.3"
+  }
+}
