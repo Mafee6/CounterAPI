@@ -14,5 +14,15 @@
         "name": "Api Endpoints",
         "desc": "A list of the available CounterAPI endpoints",
         "body": "html/api.html"
+    },
+    {
+        "name": "Widgets", 
+        "desc": "See how Counter Widgets work!",
+        "body": "html/widgets.html"
+    },
+    {
+        "name": "Widgets - Using our SDK",
+        "desc": "Using our SDK to display widgets",
+        "body": "html/sdk.html"
     }
 ]

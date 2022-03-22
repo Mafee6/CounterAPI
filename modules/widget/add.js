@@ -5,22 +5,21 @@ module.exports = (app, db, widgets) => {
         if(counter) {
             if(widgets.map(w => w.color).includes(req.params.color.toLowerCase())) {
                 if(req.query.format === "json") {
+                    counter.count++;
+                    counter.lastIncrement = Date.now();
+                    counters[counters.find(c => c.id === req.params.id)] = counter;
+                    db.set("counters", counters)
                     res.send({
                         widget: widgets.find(w => w.color === req.params.color.toLowerCase()).svg.replace(/\{\{COUNT\}\}/, counter.count.toString().slice(0, 7)),
                         timestamp: Date.now()
                     });
 
-                    counter.count++;
-                    counter.lastIncrement = Date.now();
-                    counters[counters.find(c => c.id === req.params.id)] = counter;
-                    db.set("counters", counters)
                 } else {
-                    res.send(widgets.find(w => w.color === req.params.color.toLowerCase()).svg.replace(/\{\{COUNT\}\}/, counter.count.toString().slice(0, 7)));
-
                     counter.count++;
                     counter.lastIncrement = Date.now();
                     counters[counters.find(c => c.id === req.params.id)] = counter;
                     db.set("counters", counters);
+                    res.send(widgets.find(w => w.color === req.params.color.toLowerCase()).svg.replace(/\{\{COUNT\}\}/, counter.count.toString().slice(0, 7)));
                 }
             } else {
                 res.send({

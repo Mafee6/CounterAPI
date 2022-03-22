@@ -41,8 +41,8 @@ module.exports = (app, db) => {
         }
     });
 
-    app.get("/counters/name/:name", (req, res) => {
-        const cntrs = db.get("counters").filter(c => c.name === req.params.name);
+    app.get("/api/counters/name/:name", (req, res) => {
+        const cntrs = db.get("counters").filter(c => c.name === req.params.name.replace(/ /g, "-"));
         res.send(
             cntrs != [] || !cntrs ? cntrs : {
                 status: 404,
@@ -50,4 +50,10 @@ module.exports = (app, db) => {
             }
         )
     });
+
+    app.get("/api/counters/count", (req, res) => {
+        res.send({
+            count: db.get("counters").length
+        });
+    })
 };

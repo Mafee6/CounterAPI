@@ -1,0 +1,30 @@
+<div>
+    <br><h1>CounterAPI Endpoints</h1>
+    <div class="prop" style="border-right: 5px solid lime;">
+        <item><a href="/api">/api</a></item> Root Endpoint for CounterAPI
+    </div>
+    <div class="prop">
+        <item><a href="/api/create?name=some-name">/create?name</a></item> Create a counter without the create page
+    </div>
+    <div class="prop">
+        <item><a href="/api/counter/j9nb7q28kg">/counter/:id</a></item> Get a counter by its ID
+    </div>
+    <div class="prop">
+        <item><a href="/api/counter/j9nb7q28kg/add">/counter/:id/add</a></item> Increment a counter by its ID
+    </div>
+    <div class="prop">
+        <item><a href="/api/counters/name/test-1">/counters/name/:name</a></item> Get all counters by their names
+    </div>
+    <div class="prop">
+        <item><a href="/api/counters/count">/counters/count</a></item> Get the total number of counters registered.
+    </div>
+    <div class="prop">
+        <item><a href="/api/widget/j9nb7q28kg/candy/">/widget/:id/:color(?format=json)</a></item> Get the counter widget that will no increment on request. (Next Topic has all the colors)
+    </div>
+    <div class="prop">
+        <item><a href="/api/widget/j9nb7q28kg/gold/add">/widget/:id/:color/add(?format=json)</a></item> Get the counter widget and increment it.
+    </div>
+    <div class="prop">
+        <item><a href="/view/j9nb7q28kg/">/view/:id</a></item> View the counter in a Graphically Represented Form.
+    </div>
+</div>
