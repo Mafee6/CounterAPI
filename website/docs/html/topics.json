@@ -6,6 +6,11 @@
         "selected": true
     },
     {
+        "name": "Counter Data",
+        "desc": "The Data which is stored with the counter",
+        "body": "html/counterdata.html"
+    },
+    {
         "name": "Api Endpoints",
         "desc": "A list of the available CounterAPI endpoints",
         "body": "html/api.html"

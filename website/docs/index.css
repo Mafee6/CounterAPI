@@ -78,9 +78,106 @@ body {
 
 .topic-view {
     height: calc(100vh - 80px);
-    width: calc(100vw - 370px);
+    width: calc(100vw - 380px);
     top: 80px;
     left: 380px;
     position: absolute;
     z-index: 4;
+    font-size: 1.2em;
+    line-height: 3.5ch;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.black-padding {
+    padding: 8px;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p, h, h1, h2, h3, h4, h5, h6{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gradbtn {
+    background-image: linear-gradient(-45deg, rgba(54,238,224,1) 0%, rgba(246,82,160,1) 100%);
+    padding: 8px;
+    display: inline;
+    border-radius: 0.5vh;
+    margin-left: 6px;
+    transition: filter 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.gradbtn:hover {
+    filter: brightness(120%)
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.key {
+    padding: 4px;
+    background-color: rgb(20, 20, 20);
+    outline: 2px solid rgb(50, 50, 50);
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 0.5vh;
+    user-select: none;
+}
+
+.imgh{
+    height: auto;
+    width: 512px;
+    border-radius: 0.7vh;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 7.5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.next, .back {
+    background-image: linear-gradient(-45deg, rgba(54,238,224,1) 0%, rgba(246,82,160,1) 100%);
+    padding: 8px;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 0.4vh;
+    transition: filter 0.4s;
+    cursor: pointer;
+}
+
+.next:hover, .back:hover {
+    filter: brightness(130%);
+}
+
+.prop {
+    padding: 5px;
+    width: 36vw;
+    background-color: rgb(20, 20, 20);
+    border-radius: 0.7vh;
+    margin-bottom: 5px;
+}
+
+.prop item {
+    padding: 4px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 0.4vh;
+    margin-right: 5px;
 }
