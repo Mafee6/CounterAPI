@@ -1,4 +1,4 @@
-# CounterAPI
+# <img src="/website/icons/CounterAPI.png" style="width: 32px; height: 32px;"> CounterAPI
 An API to count on requests!
 
 > Easy to create and Install
