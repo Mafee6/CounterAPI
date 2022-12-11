@@ -3,6 +3,10 @@ const fs = require("fs");
 const app = express();
 const db = require("quick.db");
 
+if(db.get("counter") == null || db.get("counter") == []) {
+    db.set("counter", []);
+}
+
 app.use(require("cors")({
     origin: "*",
     optionsSuccessStatus: 200
