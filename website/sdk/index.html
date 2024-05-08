@@ -1,49 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/icons/CounterAPI.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icons/CounterAPI.png" />
     <title>SDK | CounterAPI</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-    <div class="title">
+      <div class="title">
         Get our Mini SDK: <a href="/sdk/sdk.js">SDK</a>
         <style>
-            body {
-                font-size: 1.2em;
-                color: white;
-                background-color: rgb(34, 34, 34);
-                width: 100vw;
-                height: 100vh;
-                overflow: hidden;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                user-select: none;
-                font-size: 2.5em;
-                font-family: "Calibri", sans-serif;
-            }
+          body {
+            font-size: 1.2em;
+            color: white;
+            background-color: rgb(34, 34, 34);
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            font-size: 2.5em;
+            font-family: "Calibri", sans-serif;
+          }
 
-            a {
-                text-align: center;
-                color: rgb(0, 191, 255);
-                text-decoration: none;
-                font-weight: 600;
-            }
+          a {
+            text-align: center;
+            color: rgb(0, 191, 255);
+            text-decoration: none;
+            font-weight: 600;
+          }
         </style>
-    </div>
-    <div class="code" style="padding: 6px; background-color: rgb(0, 136, 255); text-align: center; cursor: pointer; border-radius: 0.8vh;">[Copy Code]</div>
-    <script>
+      </div>
+      <div
+        class="code"
+        style="
+          padding: 6px;
+          background-color: rgb(0, 136, 255);
+          text-align: center;
+          cursor: pointer;
+          border-radius: 0.8vh;
+        "
+      >
+        [Copy Code]
+      </div>
+      <script>
         document.querySelector(".code").addEventListener("click", () => {
-            if("clipboard" in window.navigator) {
-                window.navigator.clipboard.writeText(`<script src="https://${location.host}/sdk/sdk.js" defer>${atob("PC9zY3JpcHQ+")}`);
-                document.querySelector(".code").innerHTML = "✔";
-            } else { alert("error") }
+          if ("clipboard" in window.navigator) {
+            window.navigator.clipboard.writeText(
+              `<script src="https://${location.host}/sdk/sdk.js" defer>${atob("PC9zY3JpcHQ+")}`,
+            );
+            document.querySelector(".code").innerHTML = "✔";
+          } else {
+            alert("error");
+          }
         });
-    </script>
+      </script>
     </div>
-</body>
+  </body>
 </html>

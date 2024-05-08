@@ -1,28 +1,28 @@
 [
-    {
-        "name": "Getting Started",
-        "desc": "Getting Started with CounterAPI",
-        "body": "html/gettingstarted.html",
-        "selected": true
-    },
-    {
-        "name": "Counter Data",
-        "desc": "The Data which is stored with the counter",
-        "body": "html/counterdata.html"
-    },
-    {
-        "name": "Api Endpoints",
-        "desc": "A list of the available CounterAPI endpoints",
-        "body": "html/api.html"
-    },
-    {
-        "name": "Widgets", 
-        "desc": "See how Counter Widgets work!",
-        "body": "html/widgets.html"
-    },
-    {
-        "name": "Widgets - Using our SDK",
-        "desc": "Using our SDK to display widgets",
-        "body": "html/sdk.html"
-    }
+  {
+    "name": "Getting Started",
+    "desc": "Getting Started with CounterAPI",
+    "body": "html/gettingstarted.html",
+    "selected": true
+  },
+  {
+    "name": "Counter Data",
+    "desc": "The Data which is stored with the counter",
+    "body": "html/counterdata.html"
+  },
+  {
+    "name": "Api Endpoints",
+    "desc": "A list of the available CounterAPI endpoints",
+    "body": "html/api.html"
+  },
+  {
+    "name": "Widgets",
+    "desc": "See how Counter Widgets work!",
+    "body": "html/widgets.html"
+  },
+  {
+    "name": "Widgets - Using our SDK",
+    "desc": "Using our SDK to display widgets",
+    "body": "html/sdk.html"
+  }
 ]

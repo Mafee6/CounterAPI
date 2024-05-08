@@ -4,8 +4,9 @@
 * Rev. 22 Mar. 2022
 * Desc: To Load Counter Widgets on your webpage  
 */
+
 const CounterSDK = {
-    refresh: () => {},
+    refresh: () => { },
     cache: []
 };
 
@@ -15,7 +16,7 @@ const CounterSDK = {
     const counterLoad = () => {
         const q = document.querySelectorAll(".counter");
         const c = Array.from(q ? q : []);
-        c.map(async k => { 
+        c.map(async k => {
             k.innerHTML = await (await fetch(`${$root}${k.getAttribute("counter")}/${k.getAttribute("counter-color")}/${k.getAttribute("counter-add") || k.getAttribute("counter-add") == "" ? "add" : ""}`)).text();
             k.querySelector("text").setAttribute("font-size", "1rem");
             k.style.setProperty("display", "inline-flex", "important");
@@ -25,7 +26,7 @@ const CounterSDK = {
             });
 
             CounterSDK.cache.push(k.innerHTML);
-    
+
             k.title = "Powered By CounterAPI | Click to view details";
         });
     };

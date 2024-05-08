@@ -1,95 +1,105 @@
 body {
-    margin: 0;
-    background-color: rgb(34, 34, 34);
-    color: white;
-    overflow: hidden;
-    font-family: "Calibri", sans-serif;
+  margin: 0;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  overflow: hidden;
+  font-family: "Calibri", sans-serif;
 }
 
 .heading {
-    width: 100vw;
-    height: 40vh;
-    background: rgb(54,238,224);
-    background: linear-gradient(-45deg, rgba(54,238,224,1) 0%, rgba(246,82,160,1) 100%); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    user-select: none;
+  width: 100vw;
+  height: 40vh;
+  background: rgb(54, 238, 224);
+  background: linear-gradient(
+    -45deg,
+    rgba(54, 238, 224, 1) 0%,
+    rgba(246, 82, 160, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
 }
 
 .heading .title {
-    font-size: 3.5em;
-    font-weight: 600;
+  font-size: 3.5em;
+  font-weight: 600;
 }
 
 .heading .desc {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .content {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    height: 40vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  height: 40vh;
 }
 
-.content .info{
-    font-size: 1.8em;
-    user-select: none;
+.content .info {
+  font-size: 1.8em;
+  user-select: none;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(0, 191, 255);
+  text-decoration: none;
+  color: rgb(0, 191, 255);
 }
 
 .content {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content > div {
-    width: 80vw;
+  width: 80vw;
 }
 
 .info {
-    height: 30vh;
-    overflow-x: 75vw;
-    overflow-y: auto;
+  height: 30vh;
+  overflow-x: 75vw;
+  overflow-y: auto;
 }
 
 .app .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 
 .app .buttons div {
-    padding: 10px;
-    background-image: linear-gradient(-30deg, rgba(54,238,224,1) 0%, rgba(246,82,160,1) 100%); ;
-    border-radius: 0.5vh;
-    color: white;
-    font-weight: 600;
-    margin-right: 12px;
-    user-select: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    transition: filter 0.3s, transform 0.1s;
+  padding: 10px;
+  background-image: linear-gradient(
+    -30deg,
+    rgba(54, 238, 224, 1) 0%,
+    rgba(246, 82, 160, 1) 100%
+  );
+  border-radius: 0.5vh;
+  color: white;
+  font-weight: 600;
+  margin-right: 12px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition:
+    filter 0.3s,
+    transform 0.1s;
 }
 
 .app .buttons div:hover {
-    filter: brightness(120%);
-    transform: scale(1.1);
+  filter: brightness(120%);
+  transform: scale(1.1);
 }
 
 .pwrd {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  user-select: none;
 }

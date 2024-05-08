@@ -1,16 +1,26 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
-const db = require("quick.db");
 
-if(db.get("counter") == null || db.get("counter") == []) {
-    db.set("counter", []);
-}
+const { QuickDB } = require("quick.db");
+const db = new QuickDB({ filePath: "json.sqlite" });
 
-app.use(require("cors")({
+(async () => {
+  if ((await db.all()) == []) {
+    await db.set("counters", []);
+  }
+
+  if ((await db.get("counters")) == null || (await db.get("counters")) == []) {
+    await db.set("counters", []);
+  }
+})();
+
+app.use(
+  require("cors")({
     origin: "*",
-    optionsSuccessStatus: 200
-}))
+    optionsSuccessStatus: 200,
+  }),
+);
 
 app.use(express.static("website"));
 
@@ -18,24 +28,27 @@ const style = fs.readFileSync("./global/global.html");
 
 const moduleconf = JSON.parse(fs.readFileSync("./modules/modules.json"));
 console.log("[!] Loading Modules");
-moduleconf.paths.map(p => {
-    const r = require(`./modules${p}/${moduleconf.main}`);
-    r(app, db);
-    console.log(`[!] Loaded Module ${p}/${moduleconf.main}`);   
+moduleconf.paths.map((p) => {
+  const r = require(`./modules${p}/${moduleconf.main}`);
+  r(app, db);
+  console.log(`[!] Loaded Module ${p}/${moduleconf.main}`);
 });
 
 app.get("/api", (req, res) => {
-    res.send(`
+  res.send(`
         <a href="/docs">See our API Docs</a>
         ${style}
     `);
 });
 
 app.get("*", (req, res) => {
-    res.sendFile(__dirname + "/website/404/index.html");
+  res.sendFile(__dirname + "/website/404/index.html");
 });
 
 const server = app.listen(2492, () => {
-    console.log (`[!] Started API Server! @Port ${server.address(). port}`);
-    fs.appendFileSync("./logs/startTime.log", `[Start] Started Server @${new Date().toString()}\n`);
+  console.log(`[!] Started API Server! @Port ${server.address().port}`);
+  fs.appendFileSync(
+    "./logs/startTime.log",
+    `[Start] Started Server @${new Date().toString()}\n`,
+  );
 });

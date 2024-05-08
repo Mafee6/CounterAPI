@@ -1,10 +1,4 @@
 {
-    "main": "index.js",
-    "paths": [
-        "/create",
-        "/debug",
-        "/counter",
-        "/widget",
-        "/view"
-    ]
+  "main": "index.js",
+  "paths": ["/create", "/debug", "/counter", "/widget", "/view"]
 }
